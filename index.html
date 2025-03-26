@@ -3,215 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Anantrex Community - A platform for enthusiasts and professionals to connect and innovate">
-  <meta name="keywords" content="community, forum, events, technology, innovation">
-  <meta name="theme-color" content="#3498db">
-  <title>Anantrex Community</title>
+  <meta name="description" content="Anantrex Community - A platform for enthusiasts and professionals to connect, collaborate and innovate together">
+  <meta name="keywords" content="community, forum, events, technology, innovation, collaboration">
+  <title>Anantrex Community | Connect, Collaborate, Innovate</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome with defer for performance -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header class="sticky-header">
+  <header>
     <div class="container">
       <div class="logo-container">
-        <img src="logo.png" alt="Anantrex Logo" class="logo" width="50" height="50">
+        <img src="logo.png" alt="Anantrex Logo" class="logo" width="120" height="60">
         <h1>Anantrex Community</h1>
       </div>
-      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-        <i class="fas fa-bars"></i>
-      </button>
-      <nav class="main-nav">
+      <nav aria-label="Main navigation">
         <ul>
-          <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
-          <li><a href="#forum" class="nav-link"><i class="fas fa-comments"></i> Forum</a></li>
-          <li><a href="#events" class="nav-link"><i class="fas fa-calendar"></i> Events</a></li>
-          <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+          <li><a href="#home"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+          <li><a href="#about"><i class="fas fa-info-circle" aria-hidden="true"></i> About</a></li>
+          <li><a href="#forum"><i class="fas fa-comments" aria-hidden="true"></i> Forum</a></li>
+          <li><a href="#events"><i class="fas fa-calendar" aria-hidden="true"></i> Events</a></li>
+          <li><a href="#contact"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a></li>
         </ul>
       </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" aria-label="Toggle dark mode">
-          <i class="fas fa-moon"></i>
-        </button>
-        <a href="#login" class="btn btn-outline">Log In</a>
-      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
 
-  <main>
+  <main class="container">
     <section id="home" class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h2 class="animated-text">Welcome to the Anantrex Community</h2>
-          <p class="lead">Join us to share ideas, collaborate on projects, and grow together.</p>
-          <div class="cta-buttons"></div>
-            <a href="#join" class="btn btn-primary">Join Now</a>
-            <a href="#learn" class="btn btn-secondary">Learn More</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="hero-image.webp" alt="Community collaboration" width="500" height="400" loading="eager">
-        </div>
+      <div class="hero-content">
+        <h2>Welcome to the Anantrex Community</h2>
+        <p>Join us to share ideas, collaborate on projects, and grow together.</p>
+        <a href="#join" class="btn">Join Now</a>
       </div>
     </section>
 
     <section id="about" class="about-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Who We Are</span>
-          <h2>About Us</h2>
+      <h2>About Us</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>The Anantrex Community is a platform for enthusiasts and professionals to connect and innovate. We focus on creating a collaborative environment where members can:</p>
+          <ul>
+            <li>Share knowledge and experiences</li>
+            <li>Collaborate on cutting-edge projects</li>
+            <li>Network with like-minded individuals</li>
+            <li>Participate in workshops and events</li>
+          </ul>
         </div>
-        <div class="about-grid">
-          <div class="about-text"></div>
-            <p>The Anantrex Community is a platform for enthusiasts and professionals to connect and innovate. We focus on creating a collaborative environment where members can:</p>
-            <ul class="feature-list">
-              <li><i class="fas fa-share-alt"></i> Share knowledge and experiences</li>
-              <li><i class="fas fa-project-diagram"></i> Collaborate on cutting-edge projects</li>
-              <li><i class="fas fa-network-wired"></i> Network with like-minded individuals</li>
-              <li><i class="fas fa-laptop-code"></i> Participate in workshops and events</li>
-            </ul>
-            <a href="#mission" class="text-link">Read our mission <i class="fas fa-arrow-right"></i></a>
-          </div>
-          <div class="about-image">
-            <img src="community.webp" alt="Community gathering" width="400" height="300" loading="lazy">
-          </div>
+        <div class="about-image">
+          <img src="community.jpg" alt="People collaborating at an Anantrex Community event" width="400" height="300">
         </div>
       </div>
     </section>
 
     <section id="forum" class="forum-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Discussions</span>
-          <h2>Community Forum</h2>
-        </div>
-        <div class="forum-categories">
-          <div class="card">
-            <div class="card-icon"><i class="fas fa-microchip"></i></div>
-            <h3>Technology Discussions</h3>
-            <p>Explore the latest in tech innovations and trends.</p>
-            <a href="#" class="btn btn-text">Join Discussion <i class="fas fa-chevron-right"></i></a>
-          </div>
-          <div class="card">
-            <div class="card-icon"><i class="fas fa-users-cog"></i></div>
-            <h3>Project Collaboration</h3>
-            <p>Find partners for your next big idea.</p>
-            <a href="#" class="btn btn-text">Browse Projects <i class="fas fa-chevron-right"></i></a>
-          </div>
-          <div class="card"></div>
-            <div class="card-icon"><i class="fas fa-question-circle"></i></div>
-            <h3>Q&A</h3>
-            <p>Get help from community experts.</p>
-            <a href="#" class="btn btn-text">Ask a Question <i class="fas fa-chevron-right"></i></a>
-          </div>
-        </div>
+      <h2>Community Forum</h2>
+      <div class="forum-categories">
+        <article class="category">
+          <h3>Technology Discussions</h3>
+          <p>Explore the latest in tech innovations and trends.</p>
+          <a href="#" class="btn-small">Join Discussion</a>
+        </article>
+        <article class="category">
+          <h3>Project Collaboration</h3>
+          <p>Find partners for your next big idea.</p>
+          <a href="#" class="btn-small">Browse Projects</a>
+        </article>
+        <article class="category">
+          <h3>Q&A</h3>
+          <p>Get help from community experts.</p>
+          <a href="#" class="btn-small">Ask a Question</a>
+        </article>
       </div>
     </section>
 
     <section id="events" class="events-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Calendar</span>
-          <h2>Upcoming Events</h2>
-        </div>
-        <div class="events-grid">
-          <article class="event-card">
-            <div class="event-image">
-              <img src="event1.webp" alt="Summer Tech Meetup" width="300" height="200" loading="lazy">
-              <span class="event-badge">Featured</span>
-            </div>
-            <div class="event-content">
-              <div class="event-date"><i class="far fa-calendar-alt"></i> June 15, 2023</div>
-              <h3>Summer Tech Meetup</h3>
-              <p>Join us for networking and tech discussions in the park.</p>
-              <a href="#" class="btn btn-outline">View Details</a>
-            </div>
-          </article>
-          <article class="event-card">
-            <div class="event-image">
-              <img src="event2.webp" alt="Web Development Workshop" width="300" height="200" loading="lazy">
-            </div>
-            <div class="event-content">
-              <div class="event-date"><i class="far fa-calendar-alt"></i> July 8, 2023</div>
-              <h3>Web Development Workshop</h3>
-              <p>Learn modern web development techniques and frameworks.</p>
-              <a href="#" class="btn btn-outline">Register Now</a>
-            </div>
-          </article>
-          <article class="event-card">
-            <div class="event-image">
-              <img src="event3.webp" alt="AI Hackathon" width="300" height="200" loading="lazy">
-            </div>
-            <div class="event-content">
-              <div class="event-date"><i class="far fa-calendar-alt"></i> August 20, 2023</div>
-              <h3>AI Hackathon</h3>
-              <p>Build AI-powered solutions in this 48-hour challenge.</p>
-              <a href="#" class="btn btn-outline">Join Hackathon</a>
-            </div>
-          </article>
-        </div>
+      <h2>Upcoming Events</h2>
+      <div class="events-grid">
+        <article class="event-card">
+          <time datetime="2023-06-15" class="event-date">June 15, 2023</time>
+          <h3>Summer Tech Meetup</h3>
+          <p>Join us for networking and tech discussions in the park.</p>
+          <a href="#" class="btn-small">Details</a>
+        </article>
+        <article class="event-card">
+          <time datetime="2023-07-08" class="event-date">July 8, 2023</time>
+          <h3>Web Development Workshop</h3>
+          <p>Learn modern web development techniques and frameworks.</p>
+          <a href="#" class="btn-small">Register</a>
+        </article>
       </div>
     </section>
 
     <section id="contact" class="contact-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Get in Touch</span>
-          <h2>Contact Us</h2>
-        </div>
-        <div class="contact-container">
-          <form class="contact-form">
-            <div class="form-group floating-label">
-              <input type="text" id="name" name="name" required placeholder=" ">
-              <label for="name">Full Name</label>
-            </div>
-            <div class="form-group floating-label">
-              <input type="email" id="email" name="email" required placeholder=" ">
-              <label for="email">Email Address</label>
-            </div>
-            <div class="form-group floating-label">
-              <select id="subject" name="subject">
-                <option value="" disabled selected> </option>
-                <option value="general">General Inquiry</option>
-                <option value="support">Support</option>
-                <option value="partnership">Partnership</option>
-                <option value="other">Other</option>
-              </select>
-              <label for="subject">Subject</label>
-            </div>
-            <div class="form-group floating-label">
-              <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
-              <label for="message">Message</label>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-          </form>
-          <div class="contact-info">
-            <h3>Contact Information</h3>
-            <div class="info-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <p>123 Community St, Tech Valley</p>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-phone"></i>
-              <p>(555) 123-4567</p>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-envelope"></i>
-              <p>info@anantrex.com</p>
-            </div>
-            <div class="social-links">
-              <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Twitter" class="social-icon"><i class="fab fa-twitter"></i></a>
-              <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
-              <a href="#" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
-            </div>
+      <h2>Contact Us</h2>
+      <div class="contact-container">
+        <form class="contact-form" action="/submit-contact" method="post">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <address>
+            <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 Community St, Tech Valley</p>
+            <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+15551234567">(555) 123-4567</a></p>
+            <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@anantrex.com">info@anantrex.com</a></p>
+          </address>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
@@ -220,13 +137,12 @@
 
   <footer>
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-content">
         <div class="footer-about">
-          <img src="logo-white.png" alt="Anantrex Logo" width="40" height="40">
           <h3>Anantrex Community</h3>
           <p>Bringing enthusiasts together since 2020</p>
         </div>
-        <div class="footer-links">
+        <nav class="footer-links" aria-label="Footer navigation">
           <h3>Quick Links</h3>
           <ul>
             <li><a href="#home">Home</a></li>
@@ -235,42 +151,23 @@
             <li><a href="#events">Events</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-        </div>
-        <div class="footer-links">
-          <h3>Resources</h3>
-          <ul>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#careers">Careers</a></li>
-          </ul>
-        </div>
+        </nav>
         <div class="footer-newsletter">
-          <h3>Subscribe to Our Newsletter</h3>
-          <p>Stay updated with our latest news and events</p>
-          <form class="newsletter-form">
-            <div class="form-group">
-              <input type="email" placeholder="Your email address" required>
-              <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
-            </div>
+          <h3>Newsletter</h3>
+          <p>Stay updated with our latest news</p>
+          <form class="newsletter-form" action="/subscribe" method="post">
+            <label for="newsletter-email" class="visually-hidden">Email address</label>
+            <input type="email" id="newsletter-email" name="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
           </form>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2023 Anantrex Community. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="#privacy">Privacy Policy</a>
-          <a href="#terms">Terms of Service</a>
-          <a href="#cookies">Cookie Policy</a>
-        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Back to top button -->
-  <button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
-
-  <!-- Scripts -->
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
-</html></div>
+</html>

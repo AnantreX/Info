@@ -7,13 +7,23 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(notification);
     
     // Animation for notification
-    setTimeout(() => notification.classList.add('show'), 10);
+    setTimeout(() => notification.classList.add('show'), 100);
     
     // Auto dismiss after 3 seconds
     setTimeout(() => {
       notification.classList.remove('show');
-      setTimeout(() => notification.remove(), 500);
+      notification.addEventListener('transitionend', () => notification.remove());
     }, 3000);
+  };
+
+  // Function to handle special cases
+  const handleSpecialCases = (href, event) => {
+    if (href === '#forum') {
+      event.preventDefault();
+      showNotification('Forum section is under construction!', 'warning');
+      return true;
+    }
+    return false;
   };
 
   // Smooth scrolling for all navigation links
@@ -22,9 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const href = this.getAttribute('href');
       
       // Handle special cases
-      if (href === '#forum') {
-        event.preventDefault();
-        showNotification('Forum section is under construction!', 'warning');
+      if (handleSpecialCases(href, event)) {
         return;
       }
       
@@ -49,20 +57,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let currentSection = '';
     
+    let previousActiveItem = null;
+
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
-      
+
       if (pageYOffset >= (sectionTop - 150)) {
         currentSection = section.getAttribute('id');
       }
     });
 
-    navItems.forEach(item => {
-      item.classList.remove('active');
-      if (item.getAttribute('href') === `#${currentSection}`) {
-        item.classList.add('active');
+    if (currentSection) {
+      const currentActiveItem = document.querySelector(`nav ul li a[href="#${currentSection}"]`);
+      if (previousActiveItem !== currentActiveItem) {
+        if (previousActiveItem) {
+          previousActiveItem.classList.remove('active');
+        }
+        if (currentActiveItem) {
+          currentActiveItem.classList.add('active');
+        }
+        previousActiveItem = currentActiveItem;
       }
-    });
+    }
   });
 });
